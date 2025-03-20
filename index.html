@@ -7,14 +7,17 @@
 <title>Home</title>
 </head>
 <body>
+    <button id="backToTop" class="back-to-top-btn" onclick="scrollToTop()">↑</button>
     <div class="topnav" id="myTopnav">
         <div class="portfolio-title">MYPORTFOLIO</div>
         <div class="nav-links">
-            <a href="#home" class="active">Home</a>
-            <a href="#contact">Contact</a>
+            <a href="#myTopnav" class="active">Home</a>
             <a href="#about">About</a>
+            <a href="#contact">Contact</a>
         </div>
-        <button id="darkModeToggle" class="dark-mode-btn">Dark Mode</button>
+        <button id="darkModeToggle" class="dark-mode-btn">
+            <i id="darkModeIcon" class="fa fa-moon-o"></i>
+        </button>
     </div>
 
 <div class="content" style="padding-top:115px">
@@ -27,6 +30,33 @@
 <div class="about" id="about">
     <h2 class="about-heading">ABOUT ME</h2>
     <p class="about-text">I am a third year Information Technology student at the Negros Oriental State University. I am a passionate and hardworking individual who is always eager to learn new things. I am also a team player and I am always willing to help others. I am currently looking for an internship to further enhance my skills and knowledge in the field of Information Technology.</p>
+</div>
+<!-- Contact Information -->
+<div class="contact" id="contact">
+    <div class="contact-info">
+        <h2 class="contact-heading">CONTACT INFORMATION</h2>
+        <ul class="contact-list">
+            <li><strong>Facebook:</strong> <a href="https://www.facebook.com/pahingakamunaaaa" target="_blank">Alfonz Perez</a></li>
+            <li><strong>Instagram:</strong> <a href="https://www.instagram.com/alfonzpereezz/" target="_blank">Alfonz Perez</a></li>
+            <li><strong>Phone Number:</strong>0000000000</li>
+            <li><strong>Address:</strong>Dumaguete City, Negros Oriental, Philippines 6200</li>
+        </ul>
+    </div>
+    <div class="email-form">
+        <h2 class="form-heading">EMAIL ME</h2>
+        <form>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <label for="number">Your Number:</label>
+            <input type="tel" id="number" name="number" placeholder="Enter your phone number" required>
+            
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
+            
+            <button type="submit" class="submit-btn">Send</button>
+        </form>
+    </div>
 </div>
     <script src="main.js"></script>
 </body>

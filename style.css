@@ -21,20 +21,34 @@ body.dark-mode .portfolio-title {
     color: #ffffff;
 }
 
-/* .dark-mode-btn {
-    background-color: #000000;
-    color: #ffffff;
+/* Dark Mode Button */
+.dark-mode-btn {
+    background-color: transparent;
     border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
     cursor: pointer;
-    font-size: 16px;
-    margin-left: auto;
-} */
+    font-size: 24px;
+    color: #000000;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
 
 .dark-mode-btn:hover {
-    background-color: #444444;
+    transform: scale(1.2);
+    border-radius: 50%;
 }
+
+body.dark-mode .dark-mode-btn {
+    color: #ffffff;
+}
+
+/* Icon Transition */
+#darkModeIcon {
+    transition: transform 0.3s ease;
+}
+
+body.dark-mode #darkModeIcon {
+    transform: rotate(180deg);
+}
+
 .topnav {
     background-color: #F9F6EE;
     display: flex;
@@ -72,21 +86,6 @@ body.dark-mode .portfolio-title {
     border-radius: 20px;
 }
 
-.dark-mode-btn {
-    background-color: #000000;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-left: auto;
-}
-
-.dark-mode-btn:hover {
-    background-color: #444444;
-}
-
 @media screen and (max-width: 600px) {
     .topnav {
         flex-direction: column;
@@ -116,6 +115,7 @@ body.dark-mode .portfolio-title {
         text-align: center;
     }
 }
+
 .intro-heading {
     font-size: 3rem;
     font-weight: bold;
@@ -130,7 +130,8 @@ body.dark-mode .portfolio-title {
     color: #555;
     margin-bottom: 20px;
 }
-.content-text{
+
+.content-text {
     font-size: 0.8rem;
     padding-left: 430px;
     color: #555;
@@ -147,18 +148,16 @@ body.dark-mode .portfolio-title {
         margin-right: auto;
     }
 }
+
 .about {
-    margin-top: 575px;
-    padding: 20px;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 70px;
-    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    width: 80%; /* Adjust width as needed */
     background-color: #F9F6EE;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -177,6 +176,7 @@ body.dark-mode .portfolio-title {
     line-height: 1.6;
     margin: 0 10px;
 }
+
 body.dark-mode .about {
     background-color: #333333;
     color: #ffffff;
@@ -200,4 +200,136 @@ body.dark-mode .about-text {
     .about-text {
         font-size: 0.9rem;
     }
+}
+
+.back-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top-btn:hover {
+    background-color: #222222;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Contact Section */
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 50px auto;
+    width: 90%;
+    background-color: #F9F6EE;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contact-heading {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.contact-list a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+.email-form {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.form-heading {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form .submit-btn {
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+form .submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Dark Mode for Contact Section */
+body.dark-mode .contact {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.dark-mode .contact-list a {
+    color: #1E90FF;
+}
+
+body.dark-mode form input,
+body.dark-mode form textarea {
+    background-color: #444444;
+    color: #ffffff;
+    border: 1px solid #555555;
+}
+
+body.dark-mode form .submit-btn {
+    background-color: #1E90FF;
+}
+
+body.dark-mode form .submit-btn:hover {
+    background-color: #1C86EE;
 }
