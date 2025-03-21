@@ -168,6 +168,12 @@ body.dark-mode #darkModeIcon {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+/* Dark Mode for Right Panel */
+body.dark-mode .right-panel {
+    background-color: #333333; /* Dark background for dark mode */
+    color: #ffffff; /* White text for dark mode */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+}
 .about {
     flex: 1; /* Take up one part of the container */
     margin-right: 20px; /* Add spacing between the left and right panels */
@@ -289,6 +295,18 @@ body.dark-mode .back-to-top-btn:hover {
     line-height: 1.8;
 }
 
+/* Contact List Icons */
+.contact-list i {
+    margin-right: 10px;
+    color: #007BFF;
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+body.dark-mode .contact-list i {
+    color: #1E90FF;
+}
+
 .contact-list a {
     color: #007BFF;
     text-decoration: none;
@@ -365,4 +383,110 @@ body.dark-mode form .submit-btn {
 
 body.dark-mode form .submit-btn:hover {
     background-color: #1C86EE;
+}
+
+/* Chart Section */
+.chart-container {
+    margin: 50px auto;
+    width: 80%;
+    text-align: center;
+}
+
+.chart-heading {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+body.dark-mode .chart-heading {
+    color: #ffffff;
+}
+/* Project List Section */
+.project-list {
+    margin: 50px auto;
+    width: 80%;
+    text-align: left;
+    background-color: #F9F6EE;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-heading {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center; /* Center the text horizontally */
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #007BFF; /* Add a bottom border for emphasis */
+    display: block; /* Ensure it spans the full width */
+    margin-top: 0; /* Remove any unnecessary top margin */
+    padding-bottom: 10px; /* Add spacing below the title */
+}
+
+/* Project Cards */
+.project-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between cards */
+}
+
+.project-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Dark Mode for Project List Section */
+body.dark-mode .project-list {
+    background-color: #333333; /* Dark background for the project list */
+    color: #ffffff; /* White text for dark mode */
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+}
+
+body.dark-mode .project-heading {
+    color: #ffffff; /* White text for the heading */
+    border-bottom: 2px solid #1E90FF; /* Adjust border color for dark mode */
+}
+
+body.dark-mode .project-card {
+    background-color: #444444; /* Dark background for project cards */
+    color: #ffffff; /* White text for project cards */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+}
+
+body.dark-mode .project-card:hover {
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2); /* Stronger shadow on hover */
+}
+
+body.dark-mode .project-card h3 {
+    color: #1E90FF; /* Highlighted title color for dark mode */
+}
+
+body.dark-mode .project-card p {
+    color: #cccccc; /* Lighter text for descriptions */
 }

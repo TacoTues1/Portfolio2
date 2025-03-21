@@ -42,3 +42,49 @@ function scrollToTop() {
     });
 }
 
+// chart
+const script = document.createElement('script');
+script.src = 'https://cdn.jsdelivr.net/npm/chart.js';
+document.head.appendChild(script);
+
+script.onload = function () {
+    const ctx = document.getElementById('skillsChart').getContext('2d');
+    const skillsChart = new Chart(ctx, {
+        type: 'bar', // Bar chart
+        data: {
+            labels: ['HTML', 'CSS', 'JavaScript', 'Java', 'ReactJS', 'NodeJS', 'Laravel'], // Skill labels
+            datasets: [{
+                label: 'Skill Level (%)',
+                data: [100, 100, 100, 100, 100, 100, 100], // Skill levels
+                backgroundColor: [
+                    '#FF5733', // HTML
+                    '#33C3FF', // CSS
+                    '#FFC300', // JavaScript
+                    '#8E44AD', // Java
+                    '#61DAFB', // ReactJS
+                    '#68A063', // NodeJS
+                    '#FF2D20'  // Laravel
+                ],
+                borderColor: [
+                    '#FF5733',
+                    '#33C3FF',
+                    '#FFC300',
+                    '#8E44AD',
+                    '#61DAFB',
+                    '#68A063',
+                    '#FF2D20'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100
+                }
+            }
+        }
+    });
+};
