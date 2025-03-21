@@ -148,16 +148,36 @@ body.dark-mode #darkModeIcon {
         margin-right: auto;
     }
 }
-
-.about {
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 50px auto;
+    width: 90%;
+}
+.right-panel {
+    flex: 1; /* Take up one part of the container */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 50px auto;
     padding: 20px;
-    width: 80%; /* Adjust width as needed */
+    height: 500px; /* Adjust height as needed */
+    background-color: #F9F6EE;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.about {
+    flex: 1; /* Take up one part of the container */
+    margin-right: 20px; /* Add spacing between the left and right panels */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: flex-start; /* Align content to the left */
+    text-align: left; /* Align text to the left */
+    padding: 20px;
+    height: 500px; /* Adjust height as needed */
     background-color: #F9F6EE;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -165,8 +185,10 @@ body.dark-mode #darkModeIcon {
 
 .about-heading {
     font-size: 2rem;
-    text-align: center;
-    margin-bottom: 20px;
+    text-align: center; /* Center the text horizontally */
+    margin-top: 0; /* Remove any default margin at the top */
+    margin-bottom: 20px; /* Add spacing below the heading */
+    width: 100%; /* Ensure the heading spans the full width of the container */
 }
 
 .about-text {
@@ -202,12 +224,13 @@ body.dark-mode .about-text {
     }
 }
 
+/* Back to Top Button */
 .back-to-top-btn {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background-color: #000000;
-    color: #ffffff;
+    color: #ffffff; /* Default white color for the icon */
     border: none;
     border-radius: 50%;
     width: 50px;
@@ -223,6 +246,16 @@ body.dark-mode .about-text {
 .back-to-top-btn:hover {
     background-color: #222222;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+/* Dark Mode for Back to Top Button */
+body.dark-mode .back-to-top-btn {
+    background-color: #444444; /* Darker background for dark mode */
+    color: #ffffff; /* White icon in dark mode */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Subtle white shadow */
+}
+
+body.dark-mode .back-to-top-btn:hover {
+    background-color: #555555; /* Slightly lighter hover effect in dark mode */
 }
 
 /* Contact Section */

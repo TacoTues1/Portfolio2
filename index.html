@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="style.css">
-<title>Home</title>
+<title>PORTFOLIO</title>
 </head>
 <body>
     <button id="backToTop" class="back-to-top-btn" onclick="scrollToTop()">↑</button>
@@ -27,9 +27,20 @@
 </div>
 
 <!--  About  -->
-<div class="about" id="about">
-    <h2 class="about-heading">ABOUT ME</h2>
-    <p class="about-text">I am a third year Information Technology student at the Negros Oriental State University. I am a passionate and hardworking individual who is always eager to learn new things. I am also a team player and I am always willing to help others. I am currently looking for an internship to further enhance my skills and knowledge in the field of Information Technology.</p>
+<div class="container">
+    <!-- Left Panel: About Section -->
+    <div class="about">
+        <h2 class="about-heading">MORE ABOUT ME</h2>
+        <p class="about-text">
+            I am a third-year Information Technology student at the Negros Oriental State University. I am a passionate and hardworking individual who is always eager to learn new things. I am also a team player and I am always willing to help others. I am currently looking for an internship to further enhance my skills and knowledge in the field of Information Technology.
+        </p>
+    </div>
+
+    <!-- Right Panel -->
+    <div class="right-panel">
+        <h2>Right Panel Content</h2>
+        <p>Additional information or content can go here.</p>
+    </div>
 </div>
 <!-- Contact Information -->
 <div class="contact" id="contact">
@@ -45,15 +56,12 @@
     <div class="email-form">
         <h2 class="form-heading">EMAIL ME</h2>
         <form>
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            
-            <label for="number">Your Number:</label>
-            <input type="tel" id="number" name="number" placeholder="Enter your phone number" required>
-            
-            <label for="message">Your Message:</label>
-            <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
-            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>  
+            <label for="number">Number:</label>
+            <input type="tel" id="number" name="number" placeholder="Enter your phone number" required>           
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>          
             <button type="submit" class="submit-btn">Send</button>
         </form>
     </div>

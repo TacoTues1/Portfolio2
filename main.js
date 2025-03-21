@@ -41,3 +41,4 @@ function scrollToTop() {
         behavior: 'smooth'
     });
 }
+
